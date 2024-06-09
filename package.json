@@ -1,0 +1,29 @@
+{
+  "name": "vue-base",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "proto": "npx pbjs -t json-module -w commonjs -o src/proto/proto.js src/proto/*.proto",
+    "transfer": "node src/proto/transfer.js",
+    "proto2": "npx pbjs -t static-module -w commonjs -o src/proto/proto.js src/proto/*.proto",
+    "protots": "pbjs --ts src/proto/*.proto > /src/proto/proto.ts",
+    "protojs": "pbjs src/proto/*.proto --es6 src/proto/proto.js",
+    "eproto": "browserify src/proto/exports.js > src/proto/im_proto.js"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "axios": "^1.7.2",
+    "protobufjs": "^6.8.8",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-require-transform": "^1.0.21",
+    "vue-tsc": "^2.0.6"
+  }
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package Person;
+// TODO 编写常用的结构体并规范
+message Person {
+  string name = 1;
+  int32 id = 2;
+  string email = 3;
+}
